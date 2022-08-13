@@ -1,5 +1,12 @@
 import React from 'react';
+import VectorLights from '../components/VectorLights';
 import { styled } from '@stitches/react';
+
+const Wrapper = styled('main', {
+  minHeight: "100vh",
+  margin: "0",
+  backgroundColor: '#0D0D0D',
+})
 
 const Header = styled('h1', {
   color: 'red',
@@ -8,9 +15,10 @@ const Header = styled('h1', {
 
 export default function Home() {
   return (
-    <div>
-      <Header>Header</Header>
+    <Wrapper>
+      {/* <Header>Hi this is an example project!</Header> */}
       Test
-    </div>
+      <VectorLights></VectorLights>
+    </Wrapper>
   );
 }
