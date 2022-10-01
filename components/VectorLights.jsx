@@ -1,7 +1,11 @@
 import { styled } from "@stitches/react"
 
 const Vector = styled("svg", {
+  position: "absolute",
+  top: "0",
+  left: "0",
   minHeight: "100vh",
+  minWidth: "100%",
 })
 
 const VectorLights = () => {
