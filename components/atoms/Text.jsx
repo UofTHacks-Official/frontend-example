@@ -3,41 +3,38 @@ import {styled, css} from "~stitches";
 
 const h1Styles = {
   fontWeight: "500",
-  fontSize: "2.441rem"
+  fontSize: "$header"
 };
 
 const h2Styles = {
   fontWeight: "500",
-  fontSize: "2.441rem"
+  fontSize: "$subheader"
 };
 
 
 const SubtitleStyles = css({
+  color: "$primary-text",
   fontWeight: "500",
-  fontSize: "1.963rem",
-  color: "red",
+  fontSize: "$subtitle",
 });
 
 const bodyStyles = {
   fontWeight: "400",
   fontSize: "1rem",
-  color: "pink",
 };
 const smallStyles = {
   fontWeight: "400",
   fontSize: "0.8rem",
-  color: "lightblue",
 };
 const largeStyles = {
   fontWeight: "400",
   fontSize: "1.25rem",
-  color: "green",
 };
 
 const DisplayStyles = css({
   '& span': {
     fontWeight: "500",
-    fontSize: "4.768rem",
+    fontSize: "$display",
     backgroundImage: 'linear-gradient(91.6deg, #DF7D7D 6.77%, #B487EE 57.81%, #5EA7D5 88.54%)',
     backgroundClip: 'text',
     color: 'transparent',
@@ -45,15 +42,13 @@ const DisplayStyles = css({
 });
 
 const TitleStyles = css({
-  fontFamily: 'Filson Pro',
-  color: "#242424",
+  color: "$secondary",
   fontWeight: "500",
-  fontSize: "3.052rem",
+  fontSize: "$title",
 })
 
 const HeaderStyles = css({
-  fontFamily: 'Filson Pro',
-  color: "#242424",
+  color: "$primary-text",
   variants: {
     type: {
       h1: {...h1Styles},
@@ -66,14 +61,12 @@ const HeaderStyles = css({
 })
 
 const TextStyles = css({
-  fontFamily: 'Filson Pro',
-  color: "#242424",
+  color: "$primary-text",
   variants: {
     size: {
       body: {...bodyStyles},
       small: {...smallStyles},
       large: {...largeStyles},
-      
     }
   },
   defaultVariants: {
