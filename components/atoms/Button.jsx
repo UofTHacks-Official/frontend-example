@@ -1,9 +1,11 @@
 import React from 'react';
 
-import { styled, css } from "@stitches/react";
+import { styled, css } from "~stitches";
 
 const ButtonStyles = css({
-  color: "red",
+  fontFamily: "$filsonPro",
+  fontSize: "$regular",
+  color: '$alternate-text',
   variants: {
     type: {
       main: {
