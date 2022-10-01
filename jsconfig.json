@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@": ["*"],
+      "@components/*": ["components/*"],
+      "@sections/*": ["components/sections/*"],
+      "~stitches": ["stitches.config.js"]
+    }
+  }
+}
