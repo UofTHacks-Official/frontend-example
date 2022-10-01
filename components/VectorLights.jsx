@@ -1,4 +1,4 @@
-import { styled } from "@stitches/react"
+import { styled } from "~stitches"
 
 const Vector = styled("svg", {
   position: "absolute",
@@ -19,8 +19,8 @@ const VectorLights = () => {
         <path d="M1001.21 -95.9802C905.234 -215.896 1259.21 -204.724 1441.21 -204.724L2027.23 -204.724L2115.21 631.432C1811.71 553.02 1424.93 720.013 1556.21 592.02C1656.21 494.52 1709.83 355.573 1330.94 366.409C952.056 377.244 1397.21 165.02 1417.21 104.52C1462.9 -33.7124 1121.17 53.914 1001.21 -95.9802Z" fill="#5EA7D5"/>
       </g>
       <defs>
-        <filter id="filter0_f_7_41" x="-531.711" y="-505" width="3036.13" height="2161.93" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <filter id="filter0_f_7_41" x="-531.711" y="-505" width="3036.13" height="2161.93" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
         <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_7_41"/>
       </filter>
