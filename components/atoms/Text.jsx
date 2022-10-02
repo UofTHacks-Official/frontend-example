@@ -11,13 +11,6 @@ const h2Styles = {
   fontSize: "$subheader"
 };
 
-
-const SubtitleStyles = css({
-  color: "$primary-text",
-  fontWeight: "500",
-  fontSize: "$subtitle",
-});
-
 const bodyStyles = {
   fontWeight: "400",
   fontSize: "1rem",
@@ -41,38 +34,6 @@ const DisplayStyles = css({
   }
 });
 
-const TitleStyles = css({
-  color: "$secondary",
-  fontWeight: "500",
-  fontSize: "$title",
-})
-
-const HeaderStyles = css({
-  color: "$primary-text",
-  variants: {
-    type: {
-      h1: {...h1Styles},
-      h2: {...h2Styles}
-    }
-  },
-  defaultVariants: {
-    type: 'h1'
-  }
-})
-
-const TextStyles = css({
-  color: "$primary-text",
-  variants: {
-    size: {
-      body: {...bodyStyles},
-      small: {...smallStyles},
-      large: {...largeStyles},
-    }
-  },
-  defaultVariants: {
-    type: 'body'
-  }
-});
 
 export const DisplayText = (props) => {
   const StyledDisplay = styled("h1", DisplayStyles);
@@ -84,7 +45,11 @@ export const DisplayText = (props) => {
 
 export const Title = (props) => {
   
-  const StyledTitle = styled("h1", TitleStyles);
+  const StyledTitle = styled("h1", css({
+    color: props.color == null ? "$secondary" : props.color,
+    fontWeight: "500",
+    fontSize: "$title",
+  }));
 
   return (
     <StyledTitle>{props.children}</StyledTitle>
@@ -94,10 +59,21 @@ export const Title = (props) => {
 
 export const Header = (props) => {
   
-  const StyledHeader = styled(props.type || "h1", HeaderStyles);
+  const StyledHeader = styled(props.type || "h1", css({
+    color: props.color == null ? "$primary-text" : props.color,
+    variants: {
+      type: {
+        h1: {...h1Styles},
+        h2: {...h2Styles}
+      }
+    },
+    defaultVariants: {
+      type: 'h1'
+    }
+  }));
 
   return (
-    <StyledHeader type={props.type}>{props.children}</StyledHeader>
+    <StyledHeader type={props.type} color={props.color}>{props.children}</StyledHeader>
   )
 
 }
@@ -105,19 +81,35 @@ export const Header = (props) => {
 
 export const Subtitle = (props) => {
 
-  const StyledSubtitle = styled("h3", SubtitleStyles);
+  const StyledSubtitle = styled("h3", css({
+    color: props.color == null ? "$primary-text" : props.color,
+    fontWeight: "500",
+    fontSize: "$subtitle",
+  }));
 
   return (
-    <StyledSubtitle>{props.children}</StyledSubtitle>
+    <StyledSubtitle color={props.color}>{props.children}</StyledSubtitle>
   )
 }
 
 
 export const Body = (props) => {
 
-  const StyledBody = styled("p",TextStyles)
+  const StyledBody = styled("p", css({
+    color: "$primary-text",
+    variants: {
+      size: {
+        body: {...bodyStyles},
+        small: {...smallStyles},
+        large: {...largeStyles},
+      }
+    },
+    defaultVariants: {
+      type: 'body'
+    }
+  }));
 
   return (
     <StyledBody size={props.size}>{props.children}</StyledBody>
-  )
-}
+  );
+};
