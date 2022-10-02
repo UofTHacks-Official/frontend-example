@@ -1,7 +1,6 @@
 import React from 'react';
-import VectorLights from '@components/VectorLights';
 import { styled } from '@stitches/react';
-import { Button, Body, DisplayText, Title, Header, Subtitle } from '@components/atoms';
+import { Button, Body, DisplayText, Title, Header, Subtitle, VectorLights } from '@components/atoms';
 
 const Wrapper = styled('main', {
   minHeight: "100vh",
