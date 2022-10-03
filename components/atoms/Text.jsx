@@ -96,7 +96,10 @@ export const Subtitle = (props) => {
 export const Body = (props) => {
 
   const StyledBody = styled("p", css({
+    fontFamily: "$poppins",
+    fontWeight: "400",
     color: "$primary-text",
+    lineHeight: "30px",
     variants: {
       size: {
         body: {...bodyStyles},
