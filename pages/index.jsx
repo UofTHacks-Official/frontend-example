@@ -1,21 +1,18 @@
 import React from 'react';
 import { styled } from '@stitches/react';
-import { Button, Body, DisplayText, Title, Header, Subtitle, VectorLights } from '@components/atoms';
+import { Button, Body, DisplayText, Title, Header, Subtitle, MainBackground, StarsBackground} from '@components/atoms';
 
-const Wrapper = styled('main', {
-  minHeight: "100vh",
-  minWidth: "100%",
-  margin: "0",
-  backgroundColor: '#0D0D0D',
-  // backgroundColor: 'white',
+const Test = styled('div', {
+  height: "5000px",
+  width: "100%",
 })
 
 export default function Home() {
   return (
-    <Wrapper>
+    <MainBackground>
       <Button>Hello</Button>
       <Button type="cta" title="test"></Button>
-      <DisplayText>UofTHacks</DisplayText>
+      <DisplayText>UofTHacks X</DisplayText>
       <Title>There's no place like home</Title>
       <Header type="h1"></Header>
       <Header type="h2"></Header>
@@ -23,8 +20,6 @@ export default function Home() {
       <Body size="large">Body Large</Body>
       <Body>Body Regular</Body>
       <Body size="small">Body Small</Body>
-      <VectorLights></VectorLights>
-      test
-    </Wrapper>
+    </MainBackground>
   );
 }
