@@ -6,7 +6,8 @@
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
       "@sections/*": ["components/sections/*"],
-      "~stitches": ["stitches.config.js"]
+      "~stitches": ["stitches.config.js"],
+      "@img/*": ["public/img/*"],
     }
   }
 }
