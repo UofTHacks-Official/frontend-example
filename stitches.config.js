@@ -1,10 +1,12 @@
 import FilsonProMediumOtf from './stitches/fonts/FilsonProMedium.otf';
 import FilsonProMediumWoff from './stitches/fonts/FilsonProMedium.woff';
 import FilsonProMediumWoff2 from './stitches/fonts/FilsonProMedium.woff2';
+import PoppinsRegular from './stitches/fonts/Poppins-Regular.ttf';
+import PoppinsMedium from './stitches/fonts/Poppins-Medium.ttf';
 
 import { createStitches } from '@stitches/react';
 
-import { fontSizes, utils, colors, breakpoints, spaces } from './stitches';
+import { fontSizes, colors } from './stitches';
 
 const systemFont = `
 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
@@ -23,6 +25,25 @@ const fonts = {
       },
     ],
   },
+  poppins: {
+    name: 'Poppins',
+    family: [
+      {
+        fontFamily: 'Poppins',
+        fontStyle: 'normal',
+        fontDisplay: 'swap',
+        fontWeight: '400',
+        src: `url(${PoppinsRegular})`,
+      },
+      {
+        fontFamily: 'Poppins',
+        fontStyle: 'normal',
+        fontDisplay: 'swap',
+        fontWeight: '500',
+        src: `url(${PoppinsMedium})`,
+      },
+    ],
+  },
 };
 
 export const { config, createTheme, css, globalCss, styled, theme, keyframes } =
@@ -32,6 +53,7 @@ export const { config, createTheme, css, globalCss, styled, theme, keyframes } =
       fonts: {
         system: systemFont,
         filsonPro: `${fonts.filsonPro.name}, ${systemFont}`,
+        poppins: `${fonts.poppins.name}, ${systemFont}`,
       },
       fontSizes,
     },
@@ -40,7 +62,7 @@ export const { config, createTheme, css, globalCss, styled, theme, keyframes } =
 export const darkTheme = createTheme('dark', {});
 
 export const globalStyles = globalCss({
-  '@font-face': [...fonts.filsonPro.family],
+  '@font-face': [...fonts.filsonPro.family, ...fonts.poppins.family],
   'html, body': {
     fontFamily: fonts.filsonPro.name,
     color: '$primary-text',
