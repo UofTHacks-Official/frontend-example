@@ -57,6 +57,9 @@ export const { config, createTheme, css, globalCss, styled, theme, keyframes } =
       },
       fontSizes,
     },
+    media: {
+      bp1: '(max-width: 1330px)',
+    },
   });
 
 export const darkTheme = createTheme('dark', {});
