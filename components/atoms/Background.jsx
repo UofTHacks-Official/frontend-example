@@ -6,30 +6,28 @@ const image = {
 }
 
 const Wrapper = styled("div", {
-  position: 'absolute',
-  top: '0',
-  left: '0',
   minWidth: '100%',
   minHeight: '100%',
-  pointerEvents: 'none',
   background: '#0D0D0D',
-  backgroundRepeat: "repeat-y",
-  zIndex: '-1',
+  backgroundRepeat: "repeat",
   margin: "0",
   variants: {
     bg: {
       main: {
-        backgroundImage: image.starWithLights,
-        backgroundRepeat: "no-repeat",
+        backgroundImage: image.starWithLights
       },
       starsOnly: {
         backgroundImage: image.starsOnly,
       }
-    }
+    },
   },
   defaultVariants: {
     bg: "main"
   }
+})
+
+const Padding = styled("main", {
+  padding: "0 12.76vw",
 })
 
 /**
@@ -40,7 +38,7 @@ const Wrapper = styled("div", {
 export const MainBackground = (props) => {
   return (
     <Wrapper>
-      {props.children}
+      {props.padded ? <Padding>{props.children}</Padding> : props.children}
     </Wrapper>
   )
 }
@@ -48,7 +46,7 @@ export const MainBackground = (props) => {
 export const StarsBackground = (props) => {
   return (
     <Wrapper bg="starsOnly">
-      {props.children}
+      {props.padded ? <Padding>{props.children}</Padding> : props.children}
     </Wrapper>
   )
 }
