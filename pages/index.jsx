@@ -23,6 +23,11 @@ const ContentWrapper = styled('div', css({
   maxWidth: "1440px",
   flexFlow: "row wrap",
   gap: "5vw",
+  '@bp1': {
+    "& div": {
+      "flexBasis": "100%",
+    }
+  }
 }));
 
 const ImageWrapper = styled('div', css({
@@ -33,10 +38,11 @@ const ImageWrapper = styled('div', css({
   height: "309px",
   flex: "1",
   overflow: "hidden",
+  marginLeft: "auto",
+  marginRight: "auto",
   "& img": {
     boxShadow: "0px 8px 24px 2px rgba(0, 0, 0, 0.25)",
     borderRadius: "10px",
-    margin: "auto",
   }
 }));
 
