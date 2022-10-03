@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@": ["*"],
+      "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
       "@sections/*": ["components/sections/*"],
       "~stitches": ["stitches.config.js"]
