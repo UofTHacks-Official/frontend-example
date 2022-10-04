@@ -116,3 +116,23 @@ export const Body = (props) => {
     <StyledBody size={props.size}>{props.children}</StyledBody>
   );
 };
+
+export const Link = (props) => {
+
+  const StyledLink = styled("a", css({
+    fontFamily: "$poppins",
+    fontWeight: "500",
+    color: "$primary-text",
+    textDecoration: "none",
+    cursor: "pointer",
+    transition: "0.3s ease-out all",
+    "&:hover": {
+      color: "$secondary-text",
+      transition: "0.3s ease-out all",
+    }
+  }))
+
+  return (
+    <StyledLink href={props.href} target={"_blank"}>{props.children}</StyledLink>
+  )
+}
