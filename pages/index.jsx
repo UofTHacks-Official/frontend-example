@@ -2,12 +2,14 @@ import React from 'react';
 import Image from 'next/image';
 import { styled, css } from '~stitches';
 import { Button, Body, DisplayText, Title, Header, Subtitle, MainBackground, StarsBackground, MLHBanner} from '@components/atoms';
+import { Footer } from '@components/molecules';
 import { About } from "@components/sections";
 
 import AboutUsImg from "@assets/AboutUs.png";
 
 const HeroWrapper = styled('div', {
   display: "flex",
+  paddingTop: "25vh",
   flexDirection: "column",
   minHeight: "100vh",
   width: "100%",
@@ -69,7 +71,7 @@ export default function Home() {
               </span>
             </Subtitle>
             <DisplayText>UofTHacks X</DisplayText>
-            <Body>Interested in sponsoring?</Body>
+            <Body><a href='mailto:sponsors@uofthacks.com' style={{color: "#ffff", "textDecoration": "underline"}}>Interested in sponsoring?</a></Body>
           </HeroWrapper>
           <AboutWrapper>
             <Title>About Us</Title>
@@ -90,6 +92,7 @@ export default function Home() {
               </ImageWrapper>
             </ContentWrapper>
           </AboutWrapper>
+          <Footer />
       </MainBackground>
     </>
   );
