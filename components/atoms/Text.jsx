@@ -27,7 +27,7 @@ const largeStyles = {
 const DisplayStyles = css({
   '& span': {
     fontWeight: "500",
-    fontSize: "$display",
+    fontSize: "clamp(2rem, 11vw, $display)",
     backgroundImage: 'linear-gradient(91.6deg, #DF7D7D 6.77%, #B487EE 57.81%, #5EA7D5 88.54%)',
     backgroundClip: 'text',
     color: 'transparent',
@@ -48,7 +48,7 @@ export const Title = (props) => {
   const StyledTitle = styled("h1", css({
     color: props.color == null ? "$secondary" : props.color,
     fontWeight: "500",
-    fontSize: "$title",
+    fontSize: "clamp(1.5rem, 10vw, $title)",
   }));
 
   return (
@@ -84,7 +84,7 @@ export const Subtitle = (props) => {
   const StyledSubtitle = styled("h3", css({
     color: props.color == null ? "$primary-text" : props.color,
     fontWeight: "500",
-    fontSize: "$subtitle",
+    fontSize: "clamp(0.8rem, 5vw, $subtitle)",
   }));
 
   return (
