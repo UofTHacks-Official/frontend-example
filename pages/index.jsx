@@ -15,7 +15,7 @@ const HeroWrapper = styled('div', {
   width: "100%",
 })
 
-const AboutWrapper = styled('section', {
+const Wrapper = styled('section', {
   minHeight: "100vh",
   width: "100%",
 })
@@ -36,31 +36,48 @@ const ImageWrapper = styled('div', css({
   position: "relative",
   maxWidth: "562px",
   maxHeight: "309px",
-  minWidth: "300px",
+  minWidth: "260px",
   height: "309px",
   flex: "1",
   overflow: "hidden",
   marginLeft: "auto",
   marginRight: "auto",
+  transition: "0.2s all",
   "& img": {
     boxShadow: "0px 8px 24px 2px rgba(0, 0, 0, 0.25)",
     borderRadius: "10px",
+  },
+  "&:hover": {
+    transform: "scale(1.05)",
+    transition: "0.2s all",
   }
 }));
 
 const TextWrapper = styled('div', css({
   display: "flex",
   flexDirection: "column",
-  minWidth: "300px",
+  minWidth: "260px",
   flex: "1"
 }));
+
+const SponsorsWrapper = styled('div', css({
+  display: "flex",
+  maxWidth: "1142px",
+  minHeight: "744px",
+  background: "linear-gradient(101.99deg, rgba(249, 249, 249, 0.5) 5.49%, rgba(249, 249, 249, 0.3) 100%)",
+  boxSizing: "border-box",
+  boxShadow: "0px 4px 24px -1px rgba(0, 0, 0, 0.25)",
+  backdropFilter: "blur(20px)",
+  margin: "0 auto",
+  borderRadius: "10px",
+}))
 
 
 export default function Home() {
   return (
     <>
       <MLHBanner />
-      <MainBackground padded>
+      <StarsBackground padded>
           <HeroWrapper>
             <Subtitle>
               January 20-22, 2023&nbsp;&nbsp;|
@@ -73,7 +90,7 @@ export default function Home() {
             <DisplayText>UofTHacks X</DisplayText>
             <Body><a href='mailto:sponsors@uofthacks.com' style={{color: "#ffff", "textDecoration": "underline"}}>Interested in sponsoring?</a></Body>
           </HeroWrapper>
-          <AboutWrapper>
+          <Wrapper>
             <Title>About Us</Title>
             <ContentWrapper>
               <TextWrapper>
@@ -91,9 +108,13 @@ export default function Home() {
                 <Image src={AboutUsImg} layout="fill" objectFit='contain' />
               </ImageWrapper>
             </ContentWrapper>
-          </AboutWrapper>
+          </Wrapper>
+          <Wrapper>
+            <Title>Sponsors</Title>
+            <SponsorsWrapper></SponsorsWrapper>
+          </Wrapper>
           <Footer />
-      </MainBackground>
+      </StarsBackground>
     </>
   );
 }
