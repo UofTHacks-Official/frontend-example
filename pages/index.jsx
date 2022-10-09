@@ -110,7 +110,7 @@ export default function Home() {
             </ContentWrapper>
           </Wrapper>
           <Wrapper>
-            <Title>Sponsors</Title>
+            <Title align="center">Sponsors</Title>
             <SponsorsWrapper></SponsorsWrapper>
           </Wrapper>
           <Footer />

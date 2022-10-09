@@ -49,6 +49,7 @@ export const Title = (props) => {
     color: props.color == null ? "$secondary" : props.color,
     fontWeight: "500",
     fontSize: "clamp(1.5rem, 10vw, $title)",
+    textAlign: props.align == null ? "left": props.align,
   }));
 
   return (
