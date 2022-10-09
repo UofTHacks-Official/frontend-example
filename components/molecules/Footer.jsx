@@ -5,10 +5,9 @@ import { Instagram, Twitter, LinkedIn } from "@icons";
 const Wrapper = styled("footer", css({
   display: "flex",
   justifyContent: "space-around",
-  height: "2.5rem",
+  minHeight: "2.5rem",
   width: "100%",
   flexFlow: "row wrap",
-  // backgroundColor: "rgba(0,0,0,0.4)",
   padding: "3rem 0",
   columnGap: "50px",
   rowGap: "25px",
@@ -38,8 +37,8 @@ export const Footer = (props) => {
       </Links>
       <Socials>
         <Link href="https://www.instagram.com/uofthacks"><Instagram /></Link>
-        <Link href=""><Twitter /></Link>
-        <Link href=""><LinkedIn /></Link>
+        <Link href="https://www.twitter.com/uofthacks"><Twitter /></Link>
+        <Link href="https://www.linkedin.com/company/uoftorontohacks"><LinkedIn /></Link>
       </Socials>
     </Wrapper>
   );
