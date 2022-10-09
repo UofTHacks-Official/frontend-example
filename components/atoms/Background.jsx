@@ -3,6 +3,7 @@ import { styled } from "~stitches";
 const image = {
   starWithLights: "url('/img/bg/StarsWithLights.svg')",
   starsOnly: "url('/img/bg/StarsOnly.svg')",
+  lightsOnly: "url(/img/bg/LightsOnly.svg)",
 }
 
 const Wrapper = styled("div", {
@@ -11,6 +12,7 @@ const Wrapper = styled("div", {
   background: '#0D0D0D',
   backgroundRepeat: "repeat",
   margin: "0",
+  backgroundSize: "cover",
   variants: {
     bg: {
       main: {
@@ -45,8 +47,8 @@ export const MainBackground = (props) => {
 
 export const StarsBackground = (props) => {
   return (
-    <Wrapper bg="starsOnly">
-      {props.padded ? <Padding>{props.children}</Padding> : props.children}
-    </Wrapper>
+      <Wrapper bg="starsOnly">
+        {props.padded ? <Padding>{props.children}</Padding> : props.children}
+      </Wrapper>
   )
 }

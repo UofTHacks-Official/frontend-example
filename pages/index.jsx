@@ -77,7 +77,7 @@ export default function Home() {
   return (
     <>
       <MLHBanner />
-      <StarsBackground padded>
+      <MainBackground padded>
           <HeroWrapper>
             <Subtitle>
               January 20-22, 2023&nbsp;&nbsp;|
@@ -114,7 +114,7 @@ export default function Home() {
             <SponsorsWrapper></SponsorsWrapper>
           </Wrapper>
           <Footer />
-      </StarsBackground>
+      </MainBackground>
     </>
   );
 }
