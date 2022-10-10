@@ -46,6 +46,7 @@ const InKindStyled = styled('div', css({
   "& a": {
     transition: "all 0.3s ease 0s",
     maxWidth: "150px",
+    minWidth: "50px",
   },
   
   "& a:hover": {
@@ -65,7 +66,8 @@ const InKindTier = (props) => {
 
 const BronzeStyled = styled(InKindStyled, css({
   "& a": {
-    maxWidth: "200px"
+    maxWidth: "200px",
+    minWidth: "80px",
   }
 }));
 
@@ -80,7 +82,8 @@ const BronzeTier = (props) => {
 
 const SilverStyled = styled(InKindStyled, css({
   "& a": {
-    maxWidth: "250px"
+    maxWidth: "250px",
+    minWidth: "100px",
   }
 }));
 
@@ -95,7 +98,8 @@ const SilverTier = (props) => {
 
 const GoldStyled = styled(InKindStyled, css({
   "& a": {
-    maxWidth: "300px"
+    maxWidth: "300px",
+    minWidth: "150px",
   }
 }));
 
@@ -110,7 +114,8 @@ const GoldTier = (props) => {
 
 const PlatinumStyled = styled(InKindStyled, css({
   "& a": {
-    maxWidth: "350px"
+    maxWidth: "350px",
+    minWidth: "200px",
   }
 }));
 
@@ -125,7 +130,8 @@ const PlatinumTier = (props) => {
 
 const DiamondStyled = styled(InKindStyled, css({
   "& a": {
-    maxWidth: "400px"
+    maxWidth: "400px",
+    minWidth: "250px",
   }
 }));
 
