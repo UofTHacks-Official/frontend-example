@@ -43,12 +43,13 @@ const InKindStyled = styled('div', css({
   gap: "5rem",
   transition: "all 0.3s ease 0s",
   cursor: "pointer",
+
   "& a": {
     transition: "all 0.3s ease 0s",
     maxWidth: "150px",
     minWidth: "50px",
   },
-  
+
   "& a:hover": {
     transition: "all 0.3s ease 0s",
     transform: "scale(1.1)",
@@ -82,7 +83,7 @@ const BronzeTier = (props) => {
 
 const SilverStyled = styled(InKindStyled, css({
   "& a": {
-    maxWidth: "250px",
+    maxWidth: "225px",
     minWidth: "100px",
   }
 }));
@@ -98,7 +99,7 @@ const SilverTier = (props) => {
 
 const GoldStyled = styled(InKindStyled, css({
   "& a": {
-    maxWidth: "300px",
+    maxWidth: "275px",
     minWidth: "150px",
   }
 }));
@@ -114,7 +115,7 @@ const GoldTier = (props) => {
 
 const PlatinumStyled = styled(InKindStyled, css({
   "& a": {
-    maxWidth: "350px",
+    maxWidth: "300px",
     minWidth: "200px",
   }
 }));
@@ -136,7 +137,7 @@ const DiamondStyled = styled(InKindStyled, css({
 }));
 
 const DiamondTier = (props) => {
-  const list = sponsors.gold.map((s, index) =>
+  const list = sponsors.diamond.map((s, index) =>
     <Sponsor key={index} href={s.url} src={s.img} name={s.name} />
   );
   return (
