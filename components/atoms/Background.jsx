@@ -3,7 +3,11 @@ import { styled } from "~stitches";
 const image = {
   starWithLights: "url('/img/bg/StarsWithLights.svg')",
   starsOnly: "url('/img/bg/StarsOnly.svg')",
-  lightsOnly: "url(/img/bg/LightsOnly.svg)",
+  lightsOnly: "url('/img/bg/LightsOnly.svg')",
+}
+
+const vectors = {
+  stroke1: "url('/img/bg/art/stroke1.svg')",
 }
 
 const Wrapper = styled("div", {
@@ -32,6 +36,19 @@ const Padding = styled("main", {
   padding: "0 12.76vw",
 })
 
+const ArtWrapper = styled("div", {
+  position: "absolute",
+  top: "0",
+  left: "0",
+  right: "0",
+  minHeight: "120%",
+  height: "auto",
+  width: "100%",
+  pointerEvents: "none",
+  backgroundSize: "cover",
+  backgroundImage: vectors.stroke1
+})
+
 /**
  * 
  * Background with Stars and Lights vectors
@@ -40,6 +57,7 @@ const Padding = styled("main", {
 export const MainBackground = (props) => {
   return (
     <Wrapper>
+      <ArtWrapper></ArtWrapper>
       {props.padded ? <Padding>{props.children}</Padding> : props.children}
     </Wrapper>
   )
